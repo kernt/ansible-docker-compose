@@ -14,6 +14,8 @@
   file:
     src: '{{ docker_compose_install_dir }}/{{ docker_compose_install_exe }}'
     dest: '{{ docker_compose_install_dir }}/docker-compose'
+    owner: docker
+    group: docker
     state: link
 
 - name: install bash completions...
